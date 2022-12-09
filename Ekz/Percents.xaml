@@ -1,0 +1,19 @@
+﻿<Window x:Class="Ekz.Percents"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ekz"
+        mc:Ignorable="d"
+        Title="Percents" Height="450" Width="800">
+    <Grid>
+        <DataGrid ItemsSource="{Binding Path=Costs}" IsReadOnly="True" ColumnWidth="*" AutoGenerateColumns = "False" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100" Width="500" RowHeaderWidth="0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=CostName}" Header="Name"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Path=CostValue}" Header="Percents"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</Window>

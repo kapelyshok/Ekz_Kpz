@@ -1,0 +1,27 @@
+﻿<Window x:Class="Ekz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ekz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal" Margin="50">
+            <DataGrid x:Name="OperationsGrid" Height="350" ColumnWidth="*" AutoGenerateColumns="True" Width="500">
+                <DataGrid.DataContext>
+                    <local:Operation/>
+                </DataGrid.DataContext>
+            </DataGrid>
+            <StackPanel Margin="30">                
+                <Button Content="Look at percents" HorizontalAlignment="Left" Height="50" VerticalAlignment="Center" Width="140" FontSize="18" Click="ButtonPercents_Click"/>
+                <Button Content="Monthly" HorizontalAlignment="Left" Height="50"  VerticalAlignment="Center" Width="140" FontSize="18" Click="Button_Click_Month"/>
+                <Button Content="Delete" HorizontalAlignment="Left" Height="50"  VerticalAlignment="Center" Width="140" FontSize="18" Click="Button_Click_Delete"></Button>
+                <Button Content="Save" HorizontalAlignment="Left" Height="50"  VerticalAlignment="Center" Width="140" FontSize="18" Click="Button_Click_Save"></Button>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
